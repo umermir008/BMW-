@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW - The Ultimate Driving Machine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bmw-blue': '#0066CC',
+                        'bmw-dark': '#1a1a1a',
+                        'bmw-gray': '#2d2d2d'
+                    },
+                    fontFamily: {
+                        'bmw': ['Arial', 'Helvetica', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black text-white font-bmw overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-sm transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="bmw-logo opacity-0 animate-fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW Logo" class="h-8 w-8">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-bmw-blue transition-colors duration-300">Home</a>
+                    <a href="#about" class="hover:text-bmw-blue transition-colors duration-300">About</a>
+                    <a href="#models" class="hover:text-bmw-blue transition-colors duration-300">Models</a>
+                    <a href="#technology" class="hover:text-bmw-blue transition-colors duration-300">Technology</a>
+                    <a href="#contact" class="hover:text-bmw-blue transition-colors duration-300">Contact</a>
+                </div>
+                <button class="md:hidden text-white relative w-8 h-8 flex items-center justify-center transition-all duration-300 hover:text-bmw-blue" id="mobile-menu-btn">
+                    <div class="hamburger-lines">
+                        <span class="line line1 block w-6 h-0.5 bg-current mb-1 transition-all duration-300"></span>
+                        <span class="line line2 block w-6 h-0.5 bg-current mb-1 transition-all duration-300"></span>
+                        <span class="line line3 block w-6 h-0.5 bg-current transition-all duration-300"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+             style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80');">
+        </div>
+        
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+            <div class="bmw-hero-logo mb-8 opacity-0">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW Logo" class="h-20 w-20 mx-auto">
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 opacity-0 hero-headline">
+                Experience Sheer<br>
+                <span class="text-bmw-blue">Driving Pleasure</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl mb-8 opacity-0 hero-subtext">The Ultimate Driving Machine</p>
+            
+            <button class="bg-bmw-blue hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-bmw-blue/50 opacity-0 hero-cta">
+                Explore Models
+            </button>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl text-bmw-blue"></i>
+        </div>
+    </section>
+
+    <!-- About BMW Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-black to-bmw-dark">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="about-car opacity-0">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             alt="BMW Car" class="w-full rounded-lg shadow-2xl car-image">
+                        <div class="absolute inset-0 bg-gradient-to-r from-bmw-blue/20 to-transparent rounded-lg"></div>
+                    </div>
+                </div>
+                
+                <div class="about-text space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 opacity-0 slide-up">
+                        A Legacy of <span class="text-bmw-blue">Innovation</span>
+                    </h2>
+                    
+                    <p class="text-lg text-gray-300 opacity-0 slide-up" style="animation-delay: 0.2s;">
+                        For over a century, BMW has been synonymous with luxury, performance, and innovation. 
+                        From our first aircraft engine in 1916 to today's cutting-edge electric vehicles, 
+                        we continue to push the boundaries of automotive excellence.
+                    </p>
+                    
+                    <p class="text-lg text-gray-300 opacity-0 slide-up" style="animation-delay: 0.4s;">
+                        Every BMW embodies our commitment to engineering perfection, delivering 
+                        an unparalleled driving experience that connects you to the road like never before.
+                    </p>
+                    
+                    <div class="flex space-x-8 opacity-0 slide-up" style="animation-delay: 0.6s;">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-bmw-blue">100+</div>
+                            <div class="text-sm text-gray-400">Years of Excellence</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-bmw-blue">50M+</div>
+                            <div class="text-sm text-gray-400">Cars Delivered</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-bmw-blue">140+</div>
+                            <div class="text-sm text-gray-400">Countries Worldwide</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Models Section -->
+    <section id="models" class="py-20 bg-bmw-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 opacity-0 slide-up">
+                    Featured <span class="text-bmw-blue">Models</span>
+                </h2>
+                <p class="text-xl text-gray-300 opacity-0 slide-up" style="animation-delay: 0.2s;">
+                    Discover our latest lineup of premium vehicles
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Model Card 1 -->
+                <div class="model-card bg-bmw-gray rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 opacity-0">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="BMW X5" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-bmw-blue text-white px-3 py-1 rounded-full text-sm">New</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">BMW X5</h3>
+                        <p class="text-gray-300 mb-4">The ultimate Sports Activity Vehicle with commanding presence and dynamic performance.</p>
+                        <button class="w-full bg-transparent border border-bmw-blue text-bmw-blue hover:bg-bmw-blue hover:text-white py-2 rounded-full transition-all duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Model Card 2 -->
+                <div class="model-card bg-bmw-gray rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 opacity-0" style="animation-delay: 0.2s;">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="BMW 3 Series" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">BMW 3 Series</h3>
+                        <p class="text-gray-300 mb-4">The perfect balance of sportiness and elegance, defining the sports sedan segment.</p>
+                        <button class="w-full bg-transparent border border-bmw-blue text-bmw-blue hover:bg-bmw-blue hover:text-white py-2 rounded-full transition-all duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Model Card 3 -->
+                <div class="model-card bg-bmw-gray rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-300 opacity-0" style="animation-delay: 0.4s;">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="BMW i4" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm">Electric</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">BMW i4</h3>
+                        <p class="text-gray-300 mb-4">The first all-electric Gran Coupé, combining sustainability with pure driving pleasure.</p>
+                        <button class="w-full bg-transparent border border-bmw-blue text-bmw-blue hover:bg-bmw-blue hover:text-white py-2 rounded-full transition-all duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology & Innovation Section -->
+    <section id="technology" class="py-20 bg-gradient-to-b from-bmw-dark to-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 opacity-0 slide-up">
+                    Technology & <span class="text-bmw-blue glow-text">Innovation</span>
+                </h2>
+                <p class="text-xl text-gray-300 opacity-0 slide-up" style="animation-delay: 0.2s;">
+                    Pioneering the future of mobility
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tech Feature 1 -->
+                <div class="tech-card text-center p-8 rounded-lg bg-gradient-to-b from-bmw-gray to-black border border-bmw-blue/30 opacity-0">
+                    <div class="tech-icon mb-6">
+                        <i class="fas fa-robot text-5xl text-bmw-blue bounce-in"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">AI Drive Assistant</h3>
+                    <p class="text-gray-300">Advanced artificial intelligence that learns your driving patterns and preferences for a personalized experience.</p>
+                </div>
+                
+                <!-- Tech Feature 2 -->
+                <div class="tech-card text-center p-8 rounded-lg bg-gradient-to-b from-bmw-gray to-black border border-bmw-blue/30 opacity-0" style="animation-delay: 0.2s;">
+                    <div class="tech-icon mb-6">
+                        <i class="fas fa-route text-5xl text-bmw-blue bounce-in"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Smart Navigation</h3>
+                    <p class="text-gray-300">Intelligent routing system with real-time traffic analysis and predictive destination suggestions.</p>
+                </div>
+                
+                <!-- Tech Feature 3 -->
+                <div class="tech-card text-center p-8 rounded-lg bg-gradient-to-b from-bmw-gray to-black border border-bmw-blue/30 opacity-0" style="animation-delay: 0.4s;">
+                    <div class="tech-icon mb-6">
+                        <i class="fas fa-tachometer-alt text-5xl text-bmw-blue bounce-in"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Performance Mode</h3>
+                    <p class="text-gray-300">Dynamic performance optimization that adapts engine, suspension, and steering for ultimate driving pleasure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section id="video" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 opacity-0 slide-up">
+                    Experience <span class="text-bmw-blue">BMW</span>
+                </h2>
+            </div>
+            
+            <div class="relative max-w-4xl mx-auto video-container opacity-0">
+                <div class="aspect-video bg-bmw-gray rounded-lg overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         alt="BMW Video Thumbnail" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <button class="play-button w-20 h-20 bg-bmw-blue rounded-full flex items-center justify-center hover:bg-blue-700 transition-all duration-300 transform hover:scale-110">
+                            <i class="fas fa-play text-2xl text-white ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Test Drive Section -->
+    <section id="contact" class="py-20 bg-bmw-dark">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="contact-form opacity-0">
+                    <h2 class="text-4xl font-bold mb-8">
+                        Book a <span class="text-bmw-blue">Test Drive</span>
+                    </h2>
+                    
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="First Name" 
+                                   class="w-full bg-bmw-gray border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-bmw-blue focus:outline-none focus:ring-2 focus:ring-bmw-blue/50 transition-all duration-300">
+                            <input type="text" placeholder="Last Name" 
+                                   class="w-full bg-bmw-gray border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-bmw-blue focus:outline-none focus:ring-2 focus:ring-bmw-blue/50 transition-all duration-300">
+                        </div>
+                        
+                        <input type="email" placeholder="Email Address" 
+                               class="w-full bg-bmw-gray border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-bmw-blue focus:outline-none focus:ring-2 focus:ring-bmw-blue/50 transition-all duration-300">
+                        
+                        <input type="tel" placeholder="Phone Number" 
+                               class="w-full bg-bmw-gray border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-bmw-blue focus:outline-none focus:ring-2 focus:ring-bmw-blue/50 transition-all duration-300">
+                        
+                        <select class="w-full bg-bmw-gray border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-bmw-blue focus:outline-none focus:ring-2 focus:ring-bmw-blue/50 transition-all duration-300">
+                            <option value="">Select Model</option>
+                            <option value="x5">BMW X5</option>
+                            <option value="3series">BMW 3 Series</option>
+                            <option value="i4">BMW i4</option>
+                            <option value="other">Other</option>
+                        </select>
+                        
+                        <textarea placeholder="Message (Optional)" rows="4" 
+                                  class="w-full bg-bmw-gray border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-bmw-blue focus:outline-none focus:ring-2 focus:ring-bmw-blue/50 transition-all duration-300 resize-none"></textarea>
+                        
+                        <button type="submit" class="w-full bg-bmw-blue hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ripple-effect">
+                            Schedule Test Drive
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Map -->
+                <div class="map-container opacity-0">
+                    <h3 class="text-2xl font-bold mb-6">Find Our Dealership</h3>
+                    <div class="bg-bmw-gray rounded-lg h-96 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-map-marker-alt text-4xl text-bmw-blue mb-4"></i>
+                            <p class="text-gray-300">Interactive Map</p>
+                            <p class="text-sm text-gray-400">BMW Dealership Location</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="footer-logo opacity-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg" alt="BMW Logo" class="h-12 w-12 mb-4">
+                    <p class="text-gray-400">The Ultimate Driving Machine</p>
+                </div>
+                
+                <div class="footer-links opacity-0" style="animation-delay: 0.1s;">
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-bmw-blue transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-bmw-blue transition-colors">About</a></li>
+                        <li><a href="#models" class="hover:text-bmw-blue transition-colors">Models</a></li>
+                        <li><a href="#contact" class="hover:text-bmw-blue transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links opacity-0" style="animation-delay: 0.2s;">
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-bmw-blue transition-colors">Test Drive</a></li>
+                        <li><a href="#" class="hover:text-bmw-blue transition-colors">Service</a></li>
+                        <li><a href="#" class="hover:text-bmw-blue transition-colors">Parts</a></li>
+                        <li><a href="#" class="hover:text-bmw-blue transition-colors">Financing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social opacity-0" style="animation-delay: 0.3s;">
+                    <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-bmw-gray rounded-full flex items-center justify-center hover:bg-bmw-blue transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-bmw-gray rounded-full flex items-center justify-center hover:bg-bmw-blue transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-bmw-gray rounded-full flex items-center justify-center hover:bg-bmw-blue transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-bmw-gray rounded-full flex items-center justify-center hover:bg-bmw-blue transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 BMW. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
